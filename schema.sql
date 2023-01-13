@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS text;
+
+CREATE TABLE text (
+    title TEXT PRIMARY KEY NOT NULL,
+    username TEXT NOT NULL,
+    content TEXT NOT NULL
+);
