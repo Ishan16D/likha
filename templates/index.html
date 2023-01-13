@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row d-flex justify-content-center mx-auto bg-primary p-3 mt-3 border border-2 border-success rounded">
+    <div class="col justify-content-center align-items-center text-center">
+        <div class="mb-3">
+            <h1 class="mx-auto text-white"> Text Editor</h1>
+
+        </div>
+        <div class="mb-3">
+            <p class="mx-auto text-white">
+                Careful you won't be able to line edit while writing!!
+            </p>
+
+        </div>
+
+        <div class="mb-3">
+            <label for="textArea text-white" class="form-label">Editor</label>
+            <textarea class="form-control" id="textArea" cols="120" rows="20" placeholder="Start writing!!"></textarea>
+            <br>
+            <button type="submit button" class="btn btn-light text-primary"> Save your work </button>
+        </div>
+
+        <!-- <div class="mb-3">
+
+            <form action="">
+                <textarea name="text-editor" id="text-editor" cols="120" rows="20"
+                    placeholder="Start writing!!"></textarea>
+                <br>
+                <button type="submit"> Save your work </button>
+            </form>
+        </div> -->
+
+    </div>
+
+</div>
+
+{% endblock %}
