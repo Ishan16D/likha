@@ -8,6 +8,6 @@ with open('schema.sql') as f:
 
 cur = connection.cursor()
 
-cur.execute("INSERT INTO text (title,username,content) VALUES (?, ?, ?)",
-            ('starter text', 'IshanD', 'starter text')
+cur.execute("INSERT INTO pages (title,username,tagline,content) VALUES (?, ?, ?, ?)",
+            ('Starter title', 'IshanD', 'starter tagline', 'starter text')
             )

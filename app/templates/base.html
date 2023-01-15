@@ -28,10 +28,26 @@
                         <a class="nav-link text-white" href="/create">Write</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">My Work</a>
+                        <a class="nav-link text-white" href="/my_work">My Work</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Profile</a>
+                    <li>
+
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Account
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            {% if current_user.is_authenticated %}
+                            <a class="nav-link text-primary" href="/profile">Profile</a>
+                            {% endif %}
+                            {% if not current_user.is_authenticated %}
+                            <a class="nav-link text-primary" href="/login">Login</a>
+                            <a class="nav-link text-primary" href="/signup">Sign Up</a>
+                            {% endif %}
+                            {% if current_user.is_authenticated %}
+                            <a class="nav-link text-primary" href="/logout">Log Out</a>
+                            {% endif %}
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -43,7 +59,7 @@
         <div class="alert alert-danger">{{ message }}</div>
         {% endfor %}
     </div>
-    <div class="container d-flex">
+    <div class="container-fluid">
         {% block content %} {% endblock %}
     </div>
 
