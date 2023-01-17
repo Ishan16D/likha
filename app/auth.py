@@ -2,7 +2,6 @@ from flask import Blueprint, render_template, redirect, url_for, request, flash
 from . import db
 from werkzeug.security import generate_password_hash, check_password_hash
 from .models import User
-from . import db
 from flask_login import login_user, login_required, logout_user
 
 auth = Blueprint('auth', __name__)
@@ -50,6 +49,37 @@ def signup_post():
     db.session.commit()
 
     return redirect(url_for('auth.login'))
+    
+
+@auth.route('/forgot', methods=['GET', 'POST'])
+def forgot():
+    if request.method == 'POST':
+        user_email  = request.form['email']
+        user = User.query.filter_by(email=user_email)
+        if user:
+            return redirect(url_for('auth.new_password', email= user_email))
+        else:
+            flash('This username is not registered')
+            return render_template('forgot_password.html')
+    else:
+        return render_template('forgot_password.html')
+     
+
+@auth.route('/new_password<email>', methods=['POST', 'GET'])
+def new_password(email):
+    if request.method == 'POST':
+        email = request.form['email']
+        new_pass = request.form['password']
+        user = User.query.filter_by(email=email).first()
+        new_user = user
+        new_user.password = generate_password_hash(new_pass, method='sha256')
+        db.session.delete(user)
+        db.session.add(new_user)
+        db.session.commit()
+        return redirect(url_for('main.index'))
+    else:
+        return render_template('reset_password.html')
+
 
 @auth.route('/logout')
 @login_required

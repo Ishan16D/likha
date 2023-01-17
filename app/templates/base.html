@@ -43,6 +43,7 @@
                             {% if not current_user.is_authenticated %}
                             <a class="nav-link text-primary" href="/login">Login</a>
                             <a class="nav-link text-primary" href="/signup">Sign Up</a>
+                            <a class="nav-link text-primary" href="/forgot">Reset Password</a>
                             {% endif %}
                             {% if current_user.is_authenticated %}
                             <a class="nav-link text-primary" href="/logout">Log Out</a>

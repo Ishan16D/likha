@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container text-center">
+    <h1>
+        Here you can find your work
+    </h1>
+    <br>
+    <div class="d-flex flex-row justify-content-around m-auto p-3">
+        {% if pages %}
+        {% for page in pages %}
+        <div class="container">
+            <a href="{{ url_for('main.page', page_id=page.id) }}">
+                <h2>{{ page.title }}</h2>
+            </a>
+            <span class="badge bg-primary">{{ page.tagline }}</span>
+        </div>
+
+        {% endfor %}
+        {% else %}
+        <h2>You don't have any content yet</h2>
+        <a href="/create" class="btn btn-info d-block" role="button">Start Writing!</a>
+        {% endif %}
+
+    </div>
+
+</div>
+
+{% endblock %}
