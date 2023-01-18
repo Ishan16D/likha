@@ -1,1 +1,2 @@
-gunicorn -w 2 -b 0.0.0.0:3000 wsgi:app
+web: gunicorn wsgi:app
+
