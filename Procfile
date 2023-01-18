@@ -1,3 +1,3 @@
-web: hypercorn -b 0.0.0.0:$PORT wsgi:app
+web: hypercorn -b 0.0.0.0:8000 wsgi:app
 
 
