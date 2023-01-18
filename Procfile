@@ -1,3 +1,3 @@
-web: gunicorn --bind 0.0.0.0:0000 wsgi:app
+web: hypercorn -b 0.0.0.0:$PORT wsgi:app
 
 

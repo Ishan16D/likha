@@ -5,4 +5,12 @@ Werkzeug==2.2.2
 Gunicorn==20.1.0
 Pyopenssl==22.0.0
 Flask-Talisman==1.0.0
+H11==0.14.0 
+H2==4.1.0 
+Hpack==4.0.0 
+Hypercorn==0.14.3 
+Hyperframe==6.0.1 
+Priority==2.0.0 
+Toml==0.10.2 
+Wsproto==1.2.0
 
