@@ -37,6 +37,19 @@
                     <label for="content" class="form-label">Editor</label>
                     <textarea class="form-control" name="content" id="content" cols="120" rows="20"
                         placeholder="Start writing!!" value="{{ request.form['content']}}"></textarea>
+
+                    <script>
+
+                        let input = document.getElementById('content');
+
+                        input.onkeydown = function (event) {
+
+                            if (event.which == 8 || event.which == 46) {
+
+                                event.preventDefault();   // turn off browser transition to the previous page 
+                            }
+                        };      
+                    </script>
                     <br>
 
                 </div>

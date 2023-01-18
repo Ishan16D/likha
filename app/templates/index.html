@@ -3,37 +3,75 @@
 {% block content %}
 
 <div class="container text-center">
-    <h1>
-        Welcome to Likha
-    </h1>
-    <br>
-    <h3>
-        Likha is a text editor that forces you to just write!
-    </h3>
-    <p>
-        <span class="btn btn-warning"> Well not yet...</span>
-    </p>
-    <p>The following features are still in development but you can still write and save your content!</p>
-    <h4 class="my-5">
-        The rules are simple:
-    </h4>
-    <div class="px-3">
-        <p class="mx-3">
-            Set a timer
+    <div class="container">
+        <h1>
+            Welcome to Likha
+        </h1>
 
+    </div>
+    <div class="container">
+        <h3>
+            Likha is a text editor that forces you to just write!
+        </h3>
+        <p>
+            <span class="btn btn-warning"> Well not quite yet...</span>
         </p>
-        <p class="mx-3">
-            No backspaces
-
-        </p>
-        <p class="mx-3">
-            No grammer highlighting
-
+        <p>
+            Some features are still in development
         </p>
 
-        <a href="/create" class="btn btn-info" role="button">Start Writing!</a>
+    </div>
+    <div class="container">
 
-        <a href="/signup" class="btn btn-info" role="button">Create an account!</a>
+        <h4 class="my-5">
+            The rules are simple:
+        </h4>
+        <div class="container w-50">
+            <div class="row my-3">
+                <div class="col">
+                    <p class="mx-3 d-inline">
+                        Set a timer
+                    </p>
+                </div>
+                <div class="col">
+                    <span class="btn btn-warning"> In development</span>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col">
+                    <p class="mx-3 d-inline">
+                        Backspace and delete are disabled
+                    </p>
+                </div>
+                <div class="col">
+                    <span class="btn btn-success"> Live</span>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col">
+                    <p class="mx-3 d-inline">
+                        No grammer highlighting
+                    </p>
+                </div>
+                <div class="col">
+                    <span class="btn btn-warning"> In development</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container w-auto d-block">
+            <div class="row justify-content-around align-items-center my-3">
+
+                <a href="/create" class="btn btn-info w-auto" role="button">Start Writing!</a>
+
+            </div>
+            <div class="row justify-content-around align-items-center my-3">
+
+                <a href="/signup" class="btn btn-info w-auto" role="button">Create an account!</a>
+            </div>
+
+        </div>
+
 
 
     </div>
