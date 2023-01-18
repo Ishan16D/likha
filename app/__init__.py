@@ -11,7 +11,10 @@ def create_app():
     csp = {
         'default-src': [
             '\'self\'',
-            'cdn.jsdelivr.net'
+            'cdn.jsdelivr.net',
+            'code.jquery.com',
+            'stackpath.bootstrapcdn.com'
+
             ]
         }
 
