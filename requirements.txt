@@ -3,4 +3,5 @@ Flask-Login==0.6.2
 Flask-Sqlalchemy==3.0.2 
 Werkzeug==2.2.2
 Gunicorn==20.1.0
+Pyopenssl==22.0.0
 
