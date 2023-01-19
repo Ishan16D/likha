@@ -2,7 +2,7 @@
 
 Likha is a pretty simple tool. It's a writing application that forces you to be creative!
 
-Here there are **no backspaces**, **no grammer highlighting**, and **no chances to hold yourself back**.
+Here there are **no backspaces**, **no grammar highlighting**, and **no chances to hold yourself back**.
 
 Writers can be our own biggest impediment. We bog ourselves down, constantly rethinking the scraps of thoughts we manage to type out before deleting them and starting a new. In the process we snuff out any potential sparks of creativity. People say the cure to writers block is to just write, and thats where Likha comes in.
 Likha frees you from the self imposed line edits and overthinking. All you can do is write and keep writing.
