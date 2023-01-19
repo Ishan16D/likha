@@ -32,11 +32,11 @@ The application is currently deployed to Heroku using Hypercorn for the WSGI ser
 ### Live
 
  - Editor with "no backspace" mode
+ - Removal of grammar highlighting
  - Ability to save your work and view it later
 
 ### In development
 
- - Removal of grammer highlighting
  - Timer for edit and edit free modes
  - Ability to open and edit previous work
  - Ability to follow other users
